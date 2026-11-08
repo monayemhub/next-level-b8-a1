@@ -1,4 +1,4 @@
-const multiplyValue = (value: number, multiplier?: number) => {
+const multiplyValue = (value: number, multiplier?: number): number => {
   if (typeof multiplier !== 'undefined') {
     return value * multiplier;
   }
@@ -16,4 +16,10 @@ const processInput = (value: string | number | boolean): string | number => {
   }
 
   return value ? 'Active' : 'Inactive';
+};
+
+const formatCoordinate = (
+  location: readonly [number, number, string],
+): string => {
+  return `Location: ${location[2]} (${location[0]}, ${location[1]})`;
 };
