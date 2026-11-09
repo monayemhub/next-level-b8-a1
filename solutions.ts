@@ -63,7 +63,7 @@ class Employee {
     private baseSalary: number,
   ) {}
 
-  getDetails() {
+  getDetails(): string {
     return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`;
   }
 }
@@ -77,7 +77,7 @@ class Manager extends Employee {
     super(name, baseSalary);
   }
 
-  getRoleInfo() {
+  getRoleInfo(): string {
     return `Manager of ${this.department}: ${this.name}`;
   }
 }
