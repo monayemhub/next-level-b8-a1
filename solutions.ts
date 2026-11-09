@@ -23,3 +23,13 @@ const formatCoordinate = (
 ): string => {
   return `Location: ${location[2]} (${location[0]}, ${location[1]})`;
 };
+
+const concatenateArrays = <T>(...arrays: T[][]): T[] => {
+  const combinedArray: T[] = [];
+
+  arrays.forEach((array) => {
+    array.forEach((element) => combinedArray.push(element));
+  });
+
+  return combinedArray;
+};
