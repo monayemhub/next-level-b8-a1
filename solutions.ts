@@ -50,3 +50,9 @@ const getPopularCourses = (
 
   return newCourses;
 };
+
+const pluckValues = <T, K extends keyof T>(items: T[], key: K): T[K][] => {
+  const pluckedValues = items.map((item) => item[key]);
+
+  return pluckedValues;
+};
